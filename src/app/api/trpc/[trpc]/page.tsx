@@ -5,6 +5,8 @@ const handler = (req: Request) => {
     endpoint: "/api/trpc",
     req,
     router: appRouter,
+
+    // We can ignore this error
     createContext: () => ({}),
   });
 };
