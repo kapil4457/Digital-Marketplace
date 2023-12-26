@@ -6,7 +6,11 @@ import { appRouter } from "./trpc";
 import { inferAsyncReturnType } from "@trpc/server";
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
+import dotenv from "dotenv";
 
+dotenv.config({
+  path: __dirname + "./.env",
+});
 const createContext = ({
   req,
   res,
