@@ -4,12 +4,16 @@ import { slateEditor } from "@payloadcms/richtext-slate";
 import path from "path";
 import { buildConfig } from "payload/config";
 import { Users } from "./collections/users";
+import { Products } from "./collections/Products/Products";
+import { Media } from "./collections/Products/Media";
+import { ProductFiles } from "./collections/ProductFile";
+import { Orders } from "./collections/Orders";
 
 const TEMP_URL =
   "mongodb+srv://temp:temp@cluster0.jzqnryt.mongodb.net/?retryWrites=true&w=majority";
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000",
-  collections: [Users],
+  collections: [Users, Products, Media, ProductFiles, Orders],
   routes: {
     admin: "/sell",
   },
