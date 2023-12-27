@@ -16,7 +16,7 @@ import { trpc } from "@/trpc/client";
 import { toast } from "sonner";
 import { ZodError } from "zod";
 import { useRouter, useSearchParams } from "next/navigation";
-const page = () => {
+const Page = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const isSeller = searchParams.get("as") === "seller";
@@ -79,7 +79,7 @@ const page = () => {
               className: "gap-1.5",
             })}
           >
-            Don't have an account ? Sign-up
+            Don&apos;t have an account ? Sign-up
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -148,4 +148,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

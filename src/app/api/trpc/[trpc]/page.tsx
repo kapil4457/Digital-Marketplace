@@ -7,6 +7,8 @@ const handler = (req: Request) => {
     router: appRouter,
 
     // We can ignore this error
+    // @ts-expect-error context already passed from express middleware
+
     createContext: () => ({}),
   });
 };
